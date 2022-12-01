@@ -49,11 +49,8 @@ $(function () {
         layer.msg(res.message)
         //把 token 字符串存储到本地存储里
         localStorage.setItem('token', res.token)
-        location.href = '/index.html'
+        location.href = './index.html'
       }
     })
-  })
-  $.ajaxPrefilter(function (options) {
-    options.url = `http://www.liulongbin.top:3007${options.url}`
   })
 })
