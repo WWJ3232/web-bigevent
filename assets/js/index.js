@@ -44,10 +44,11 @@ function renderAvater(users) {
   $('#weclome').html(name)
   // 按需渲染头像
   if (users.user_pic !== null) {
-    $('.layui-nav-img').atter('src', users.user_pic).show()
+    $('.layui-nav-img').attr('src', users.user_pic).show()
     $('.text-avatar').hide()
   } else {
     $('.layui-nav-img').hide()
     const first = name[0].toUpperCase()
+    $('.text-avatar').html(first).show()
   }
 }
